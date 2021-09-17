@@ -22,7 +22,7 @@ public class UserDTO {
   @NotBlank(message = "email mustn't be blank")
   @Email(regexp = RFC_5322_REGEXP, message = "The email does not correspond RFC 5322")
   private String email;
-  @Pattern(regexp = "\\+7[0-9]{10}", message = "phone number mustn't be blank")
+  @Pattern(regexp = "\\+7[0-9]{10}", message = "phone number mustn't be correct")
   private String phoneNumber;
   @Size(min = 5, max = 15, message = "password mustn't be between 5 and 15 size")
   private String password;

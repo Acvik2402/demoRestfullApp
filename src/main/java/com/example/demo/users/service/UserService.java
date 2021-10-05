@@ -40,6 +40,7 @@ public class UserService {
     return ResponseEntity.status(HttpStatus.FORBIDDEN).body("User not found");
   }
 
+  @Transactional
   public ResponseEntity<Object> updateUserStatus(UUID userId, String status) {
     if (!(userRepository.existsById(userId))) {
       return ResponseEntity.status(HttpStatus.FORBIDDEN).body("User not found");
